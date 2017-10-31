@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+VERSION=${VERSION:-0.13.8}
+IMAGE_NAME=${IMAGE_NAME:-allomov/elasticmq}
+IMAGE_VERSION=${IMAGE_VERSION:-latest}
+
+docker build --build-arg version=$VERSION -t $IMAGE_NAME:$IMAGE_VERSION .

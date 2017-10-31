@@ -1,3 +1,6 @@
 #!/bin/bash
 
-java -jar -Dconfig.file=/elasticmq/elasticmq.conf /elasticmq/elasticmq-server-0.9.0-beta1.jar
+ELASTICMQ_ENV=${ELASTICMQ_ENV:-elasticmq}
+CONF_FILE="/elasticmq/${ELASTICMQ_ENV}.conf"
+
+java -jar -Dconfig.file=$CONF_FILE /elasticmq/elasticmq-server.jar

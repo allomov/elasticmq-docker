@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+VERSION=${VERSION:-0.13.8}
+IMAGE_NAME=${IMAGE_NAME:-allomov/elasticmq}
+IMAGE_VERSION=${IMAGE_VERSION:-latest}
+
+docker run -p 9324:9324 -e ELASTICMQ_ENV=localhost $IMAGE_NAME:$IMAGE_VERSION
